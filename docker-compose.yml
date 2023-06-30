@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  getplace-landing:
+    build: ./
+    container_name: "getplace-landing"
+    image: getplace-landing
+
+    ports:
+      - "3001:3000"
