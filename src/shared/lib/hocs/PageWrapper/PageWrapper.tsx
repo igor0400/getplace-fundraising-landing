@@ -27,7 +27,7 @@ const PageWrapper: FC<Props> = ({ children, title, withMinMax = true }) => {
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
-        <title>{title ?? 'Getplace'}</title>
+        <title>{title ?? 'Getplace - Fundraising'}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div

@@ -1,5 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
-import TextTransition, { presets } from 'react-text-transition';
+import React, { FC } from 'react';
 import { useTranslate } from '../../../../features/locale';
 
 import settings from '../model/locale/translate';
@@ -16,23 +15,10 @@ import classNames from 'classnames';
 import Link from 'next/link';
 
 const Title: FC = () => {
-  const [titleIndex, setTitleIndex] = useState(0);
   const { t } = useTranslate(settings);
   const isLargerThan1024 = useMediaQuery('(min-width: 1024px)');
   const isLargerThan640 = useMediaQuery('(min-width: 640px)');
   const isLargerThan425 = useMediaQuery('(min-width: 425px)');
-
-  useEffect(() => {
-    const intervalId = setInterval(
-      () =>
-        setTitleIndex((index) => {
-          if (index === t('titleWords').length + 1) return 0;
-          return index + 1;
-        }),
-      1500,
-    );
-    return () => clearTimeout(intervalId);
-  }, []);
 
   return (
     <div
@@ -57,9 +43,6 @@ const Title: FC = () => {
         <div className="py-36 lg:h-[590px] flex flex-col justify-center">
           <h1 className="flex flex-col justify-end text-4xl min-[425px]:text-5xl sm:text-7xl lg:text-8xl leading-[1.1] font-extrabold w-[300px] min-[425px]:w-[384px] sm:w-[576px] lg:w-[768px]">
             {t('title')}
-            <TextTransition springConfig={presets.wobbly}>
-              {t('titleWords')[titleIndex % t('titleWords').length].title}
-            </TextTransition>
           </h1>
           <p
             className="mt-5 sm:mt-8 min-[425px]:text-lg sm:text-xl leading-7 min-[425px]:leading-8 max-w-[280px] min-[425px]:max-w-sm"
@@ -104,16 +87,12 @@ const Title: FC = () => {
         </div>
         <div className="flex items-center">
           <Image
-            src={
-              t('titleWords')[titleIndex % t('titleWords').length].images.phone1
-            }
+            src={t('images').phone1}
             alt="phone"
             className="w-fit h-fit z-10 max-[1160px]:hidden"
           />
           <Image
-            src={
-              t('titleWords')[titleIndex % t('titleWords').length].images.phone2
-            }
+            src={t('images').phone2}
             alt="phone2"
             className="w-fit h-fit -ml-5 max-2xl:hidden"
           />
