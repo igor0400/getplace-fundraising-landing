@@ -4,9 +4,6 @@ import { useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 
 import settings from '../model/locale/translate.json';
-import appstore from 'public/images/appstore-golden.svg';
-import playmarket from 'public/images/google-play-golden.svg';
-import qr from 'public/images/qr-golden.svg';
 import copyright from 'public/icons/copyright.svg';
 import Link from 'next/link';
 import { useTypedSelector } from '../../../shared';
@@ -60,37 +57,7 @@ const Footer: FC = () => {
           </div>
           <div className="flex flex-col justify-between gap-y-8">
             <div className="flex flex-wrap gap-4">
-              <div className="flex flex-wrap max-sm:flex-col sm:gap-4 gap-2">
-                <Link
-                  href="https://apps.apple.com/ru/app/google/id284815942"
-                  target="_blank"
-                >
-                  <Image
-                    src={appstore}
-                    alt="appstore"
-                    height={isLargerThan640 ? 55 : 40}
-                    width={isLargerThan640 ? 200 : 160}
-                  />
-                </Link>
-
-                <Link
-                  href="https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox"
-                  target="_blank"
-                >
-                  <Image
-                    src={playmarket}
-                    alt="playmarket"
-                    height={isLargerThan640 ? 55 : 40}
-                    width={isLargerThan640 ? 200 : 160}
-                  />
-                </Link>
-              </div>
-              <Image
-                src={qr}
-                alt="qr"
-                height={55}
-                width={isLargerThan640 ? 55 : 100}
-              />
+              
             </div>
             <div className="flex gap-1 opacity-50 font-light min-[801px]:justify-end">
               <Image src={copyright} alt="copyright" width={15} />

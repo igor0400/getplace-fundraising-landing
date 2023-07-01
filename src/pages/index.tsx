@@ -10,6 +10,8 @@ export default function Home() {
     router.push(`/${lang}`);
   }, []);
 
+  // сделать тут спиннер
+
   return (
     <PageWrapper withMinMax={false}>
       <div></div>
