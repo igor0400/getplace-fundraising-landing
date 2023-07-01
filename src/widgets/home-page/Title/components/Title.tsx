@@ -8,9 +8,11 @@ import settings from '../model/locale/translate';
 
 import background from 'public/images/title-bg.png';
 import textBg from 'public/images/title-text-bg.png';
+import { useTimer } from '../../../../shared';
 
 const Title: FC = () => {
   const { t } = useTranslate(settings);
+  const { days, hours, minutes, seconds } = useTimer('2023-08-01');
   const isLargerThan1024 = useMediaQuery('(min-width: 1024px)');
   const isLargerThan640 = useMediaQuery('(min-width: 640px)');
   const isLargerThan425 = useMediaQuery('(min-width: 425px)');
@@ -28,7 +30,7 @@ const Title: FC = () => {
           : undefined
       }
       className={classNames(
-        'max-w-[2000px] mx-auto max-[1160px]:pt-20 2xl:pt-14 sm:pb-20',
+        'max-w-[2000px] mx-auto max-[1160px]:pt-20 max-2xl:pt-10 2xl:pt-14 sm:pb-20',
         {
           'full-height': !isLargerThan1024,
         },
@@ -56,17 +58,29 @@ const Title: FC = () => {
             {t('description')}
           </p>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center min-[1800px]:ml-20">
           <Image
             src={t('images').phone}
             alt="phone"
             className="w-fit h-fit z-10 max-[1160px]:hidden"
           />
-          <div>
-            <p className="text-7xl">30</p>
-            <p className="text-7xl">30</p>
-            <p className="text-7xl">30</p>
-            <p className="text-7xl">30</p>
+          <div className="flex flex-col gap-5 text-center">
+            <div>
+              <p className="text-7xl font-black">{days}</p>
+              <p className="font-medium text-xl">дней</p>
+            </div>
+            <div>
+              <p className="text-7xl font-black">{hours}</p>
+              <p className="font-medium text-xl">часов</p>
+            </div>
+            <div>
+              <p className="text-7xl font-black">{minutes}</p>
+              <p className="font-medium text-xl">минут</p>
+            </div>
+            <div>
+              <p className="text-7xl font-black">{seconds}</p>
+              <p className="font-medium text-xl">секунд</p>
+            </div>
           </div>
         </div>
       </div>
