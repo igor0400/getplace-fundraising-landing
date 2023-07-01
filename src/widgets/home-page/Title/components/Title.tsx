@@ -67,19 +67,19 @@ const Title: FC = () => {
           <div className="flex flex-col gap-5 text-center">
             <div>
               <p className="text-7xl font-black">{days}</p>
-              <p className="font-medium text-xl">дней</p>
+              <p className="font-medium text-xl">{t('timer').days}</p>
             </div>
             <div>
               <p className="text-7xl font-black">{hours}</p>
-              <p className="font-medium text-xl">часов</p>
+              <p className="font-medium text-xl">{t('timer').hours}</p>
             </div>
             <div>
               <p className="text-7xl font-black">{minutes}</p>
-              <p className="font-medium text-xl">минут</p>
+              <p className="font-medium text-xl">{t('timer').minutes}</p>
             </div>
             <div>
               <p className="text-7xl font-black">{seconds}</p>
-              <p className="font-medium text-xl">секунд</p>
+              <p className="font-medium text-xl">{t('timer').seconds}</p>
             </div>
           </div>
         </div>
