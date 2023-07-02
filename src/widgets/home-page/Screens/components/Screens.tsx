@@ -9,7 +9,7 @@ const Screens: FC = () => {
 
   return (
     <div
-      className="py-20 lg:py-36 h-full w-full max-w-[1920px] mx-auto"
+      className="pt-20 lg:py-36 h-full w-full max-w-[1920px] mx-auto"
       id="specialFeatures"
     >
       {t('screens').map((item: any, i: number) => (

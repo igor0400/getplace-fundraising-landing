@@ -1,4 +1,4 @@
-import phone from 'public/images/title-phone.png';
+import phone from 'public/images/title-phone.svg';
 
 export default {
   ru: {

@@ -1,8 +1,8 @@
-import screen1 from 'public/images/screen-card1.png';
-import screen2 from 'public/images/screen-card2.png';
-import screen3 from 'public/images/screen-card3.png';
-import screen4 from 'public/images/screen-card4.png';
-import screen5 from 'public/images/screen-card5.png';
+import screen1 from 'public/images/screen-card1.svg';
+import screen2 from 'public/images/screen-card2.svg';
+import screen3 from 'public/images/screen-card3.svg';
+import screen4 from 'public/images/screen-card4.svg';
+import screen5 from 'public/images/screen-card5.svg';
 
 export default {
   ru: {
