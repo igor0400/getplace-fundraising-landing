@@ -1,20 +1,20 @@
 import React, { FC } from 'react';
 
 interface Props {
+  title: string;
   text: string;
-  index: number;
-  isActive: boolean;
+  bgColor: string;
 }
 
-const RoadmapSliderCard: FC<Props> = ({ text, index, isActive }) => {
+const RoadmapSliderCard: FC<Props> = ({ title, text, bgColor }) => {
   return (
     <div
       className="max-[800px]:w-[240px] max-[800px]:h-[260px] w-[280px] h-[320px] p-6 rounded-2xl flex flex-col justify-between"
-      style={{ background: isActive ? '#2F2F41' : '#242431' }}
+      style={{ background: bgColor }}
     >
-      <h6 className="opacity-20 text-4xl min-[800px]:text-5xl">{index}</h6>
+      <h6 className="font-bold text-2xl">{title}</h6>
       <p
-        className="opacity-90 min-[800px]:text-lg"
+        className="min-[800px]:text-lg font-medium"
         dangerouslySetInnerHTML={{ __html: text }}
       ></p>
     </div>

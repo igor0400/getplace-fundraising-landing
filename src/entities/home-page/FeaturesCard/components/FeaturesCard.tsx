@@ -18,7 +18,7 @@ const FeaturesCard: FC<Props> = ({ title, iconUrl }) => {
         width={isLargerThan640 ? 100 : 70}
         height={isLargerThan640 ? 100 : 70}
       />
-      <p className="text-lg lg:text-xl font-bold">{title}</p>
+      <p className="text-lg lg:text-xl font-bold text-center">{title}</p>
     </div>
   );
 };

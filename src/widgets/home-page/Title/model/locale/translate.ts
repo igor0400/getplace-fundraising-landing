@@ -1,4 +1,5 @@
 import phone from 'public/images/title-phone.svg';
+import phoneEn from 'public/images/title-phone-en.svg';
 
 export default {
   ru: {
@@ -22,7 +23,7 @@ export default {
   en: {
     title: 'The future of With Getplace',
     images: {
-      phone,
+      phone: phoneEn,
     },
     timer: {
       days: 'days',
@@ -34,7 +35,7 @@ export default {
       "Kazakhstan's first app with a full booking cycle, interactive map and trusted payment system",
     timeline: {
       btnText: 'Help the project',
-      currency: 'kzt',
+      currency: '$',
     },
   },
 };

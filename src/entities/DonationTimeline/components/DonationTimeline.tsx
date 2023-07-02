@@ -1,5 +1,10 @@
-import React, { FC, useState } from 'react';
-import { Button, DonationProgressLine, getSplitNum } from '../../../shared';
+import React, { FC, useState, useEffect } from 'react';
+import {
+  Button,
+  DonationProgressLine,
+  getSplitNum,
+  useTypedSelector,
+} from '../../../shared';
 import { useTranslate } from '../../../features/locale';
 import settings from '../../../widgets/home-page/Title/model/locale/translate';
 import { useMediaQuery } from '@mui/material';
@@ -18,10 +23,23 @@ const DonationTimeline: FC<Props> = ({
   textWhite = false,
   size = 'big',
 }) => {
+  const currDonationSumInUSDT = 11111;
+  const maxDonationSumInUSDT = 44444;
   const { t } = useTranslate(settings);
-  const [currentDonationSum, setCurrentDonationSum] = useState(5000000);
-  const [maxDonationSum, setMaxDonationSum] = useState(20000000);
+  const [currentDonationSum, setCurrentDonationSum] = useState(0);
+  const [maxDonationSum, setMaxDonationSum] = useState(0);
   const isLargerThan750 = useMediaQuery('(min-width: 750px)');
+  const lang = useTypedSelector((state) => state.locales.lang);
+
+  useEffect(() => {
+    if (lang === 'ru') {
+      setCurrentDonationSum(Math.floor(currDonationSumInUSDT * 450));
+      setMaxDonationSum(Math.floor(maxDonationSumInUSDT * 450));
+    } else {
+      setCurrentDonationSum(currDonationSumInUSDT);
+      setMaxDonationSum(maxDonationSumInUSDT);
+    }
+  }, [lang]);
 
   return (
     <div style={{ maxWidth }} className={className}>

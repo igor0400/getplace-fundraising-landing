@@ -1,43 +1,63 @@
 {
   "ru": {
     "title": "Дорожная карта",
-    "description": "Узнайте больше о развитии продукта — постоянно выпускаем для вас новые функции и модули.",
+    "description": "Узнайте больше о развитии продукта",
     "slides": [
       {
-        "text": "Разработка демо-версии. <b>Результат – готово.</b>"
+        "title": "Январь 2021",
+        "text": "Начало разработки приложения для компьютерных клубов ONYX",
+        "bgColor": "#CBFFF4"
       },
       {
-        "text": "Проработка основного функционала программы и тест на клубах сети Local и Quantum. <b>Результат – готово.</b>"
+        "title": "Январь 2021",
+        "text": "Лучшие проекты инкубационной программы  Nazarbayev University",
+        "bgColor": "#CBFFF4"
       },
       {
-        "text": "Начало продаж. Результат – IV квартал 2022 года"
+        "title": "Январь 2021",
+        "text": "Топ - 5 акселерации в Nazarbayev University, получение гранта",
+        "bgColor": "#CBFFF4"
       },
       {
-        "text": "Таск-менеджер. Мобильное приложение. Результат – IV квартал 2023 года"
+        "title": "Январь 2022",
+        "text": "Активная разработка проекта, <b>расширение функционала</b>, для покрытия всех сфер деятельности",
+        "bgColor": "#CBFFF4"
       },
       {
-        "text": "Турнирный модуль.Результат – IV квартал 2023 года"
+        "title": "Июль 2023",
+        "text": "Запуск проекта, <b>поглощение</b> всего <b>рынка</b> Казахстана",
+        "bgColor": "#FFF0BA"
       }
     ]
   },
   "en": {
     "title": "Roadmap",
-    "description": "Learn more about product development - constantly releasing new features and modules for you.",
+    "description": "Learn more about product development",
     "slides": [
       {
-        "text": "Development of the demo version. <b>The result is ready.</b>"
+        "title": "January 2021",
+        "text": "Beginning the development of an application for ONYX computer clubs",
+        "bgColor": "#CBFFF4"
       },
       {
-        "text": "Working out the basic functionality of the program and test on the clubs of the Local and Quantum network. <b>The result is ready.</b>"
+        "title": "January 2021",
+        "text": "The best projects of the Nazarbayev University incubation program",
+        "bgColor": "#CBFFF4"
       },
       {
-        "text": "Start of sales. Result - Q4 2022"
+        "title": "January 2021",
+        "text": "Top 5 Acceleration at Nazarbayev University, getting a grant",
+        "bgColor": "#CBFFF4"
       },
       {
-        "text": "Tusk manager. Mobile app. Result - Q4 2023"
+        "title": "January 2022",
+        "text": "Active project development, <b>extending functionality</b>, to cover all areas of activity",
+        "bgColor": "#CBFFF4"
       },
       {
-        "text": "Tournament module. Result - IV quarter of 2023"
+        "title": "July 2023",
+        "text": "Project launch, <b>takeover</b> of the entire <b>market</b> in Kazakhstan",
+        "bgColor": "#FFF0BA"
       }
     ]
   }

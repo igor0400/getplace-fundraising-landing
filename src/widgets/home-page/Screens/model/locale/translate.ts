@@ -3,6 +3,11 @@ import screen2 from 'public/images/screen-card2.svg';
 import screen3 from 'public/images/screen-card3.svg';
 import screen4 from 'public/images/screen-card4.svg';
 import screen5 from 'public/images/screen-card5.svg';
+import screen1En from 'public/images/screen-card1-en.svg';
+import screen2En from 'public/images/screen-card2-en.svg';
+// import screen3En from 'public/images/screen-card3-en.svg';
+// import screen4En from 'public/images/screen-card4-en.svg';
+// import screen5En from 'public/images/screen-card5-en.svg';
 
 export default {
   ru: {
@@ -56,14 +61,14 @@ export default {
         title: 'Easy transition to our system',
         description:
           'Free migration to our system we will make by ourselves - we will transfer the profile of the client base of your club and all related parameters, such as balance, discount, privileges',
-        imageUrl: screen1,
+        imageUrl: screen1En,
         float: 'right',
       },
       {
         title: 'Built-in shopping in Shell',
         description:
           'Sales of time, drinks and food can be organized through a free module ONYX store, which will allow your customers to shop: directly from within the client shell',
-        imageUrl: screen2,
+        imageUrl: screen2En,
         float: 'left',
       },
       {

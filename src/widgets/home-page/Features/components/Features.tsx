@@ -13,7 +13,7 @@ const Features: FC = () => {
 
   return (
     <div
-      className="pt-20 lg:pt-36 max-w-6xl mx-auto px-5 sm:px-20 xl:px-10"
+      className="pt-20 lg:pt-36 max-w-[1220px] mx-auto px-5 sm:px-20 xl:px-10"
       id="features"
     >
       <div className="flex max-lg:flex-col lg:justify-between lg:items-end">
@@ -23,7 +23,7 @@ const Features: FC = () => {
             alt="arrow"
             className="absolute -bottom-28 lg:-bottom-24 -left-16 max-sm:hidden"
           />
-          <h2 className="text-3xl sm:text-5xl font-extrabold max-w-md">
+          <h2 className="text-3xl sm:text-5xl font-extrabold max-w-lg">
             {t('title')}
           </h2>
         </div>
