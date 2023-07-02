@@ -12,24 +12,40 @@ const Timer: FC<Props> = ({ className }) => {
   const { t } = useTranslate(settings);
   const { days, hours, minutes, seconds } = useTimer('2023-08-01');
 
+  const items = [
+    {
+      count: days,
+      title: t('timer').days,
+    },
+    {
+      count: hours,
+      title: t('timer').hours,
+    },
+    {
+      count: minutes,
+      title: t('timer').minutes,
+    },
+    {
+      count: seconds,
+      title: t('timer').seconds,
+    },
+  ];
+
   return (
     <div className={className}>
-      <div>
-        <p className="text-7xl font-black">{days}</p>
-        <p className="font-medium text-xl">{t('timer').days}</p>
-      </div>
-      <div>
-        <p className="text-7xl font-black">{hours}</p>
-        <p className="font-medium text-xl">{t('timer').hours}</p>
-      </div>
-      <div>
-        <p className="text-7xl font-black">{minutes}</p>
-        <p className="font-medium text-xl">{t('timer').minutes}</p>
-      </div>
-      <div>
-        <p className="text-7xl font-black">{seconds}</p>
-        <p className="font-medium text-xl">{t('timer').seconds}</p>
-      </div>
+      {items.map(({ count, title }, i) => (
+        <div
+          className="max-[900px]:flex max-[550px]:block max-[900px]:gap-1 items-end"
+          key={i}
+        >
+          <p className="text-7xl max-[900px]:text-4xl max-[550px]:text-3xl font-black">
+            {count}
+          </p>
+          <p className="font-medium max-[900px]:font-bold text-xl  max-[350px]:text-lg">
+            {title}
+          </p>
+        </div>
+      ))}
     </div>
   );
 };

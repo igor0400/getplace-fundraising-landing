@@ -14,6 +14,10 @@ export default {
     },
     description:
       'Первое в Казахстане приложение с полным циклом брони, интерактивной картой и системой доверительного платежа',
+    timeline: {
+      btnText: 'Помочь проекту',
+      currency: 'тг',
+    },
   },
   en: {
     title: 'The future of With Getplace',
@@ -28,5 +32,9 @@ export default {
     },
     description:
       "Kazakhstan's first app with a full booking cycle, interactive map and trusted payment system",
+    timeline: {
+      btnText: 'Help the project',
+      currency: 'kzt',
+    },
   },
 };

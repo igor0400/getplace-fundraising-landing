@@ -42,17 +42,6 @@ const Toolbar: FC<Props> = ({ className }) => {
           RU
         </button>
       </div>
-      <div className="flex flex-wrap gap-2 min-[800px]:gap-4">
-        <Button className="w-full min-[800px]:w-fit text-white" bgColor="#000">
-          {t('loginBtn')}
-        </Button>
-        <Button
-          className="min-[800px]:px-1 w-full min-[800px]:w-fit max-[800px]:border min-[800px]:underline"
-          style={{ borderColor: '#000' }}
-        >
-          {t('regBtn')}
-        </Button>
-      </div>
     </div>
   );
 };

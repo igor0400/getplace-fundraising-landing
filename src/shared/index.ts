@@ -4,6 +4,7 @@ import PageWrapper from './lib/hocs/PageWrapper/PageWrapper';
 import { useTypedSelector } from './lib/hooks/useTypedSelector';
 import { useTimer } from './lib/hooks/useTimer';
 import DonationProgressLine from './components/DonationProgressLine/DonationProgressLine';
+import { getSplitNum } from './lib/assets/getSplitNum';
 
 export {
   Button,
@@ -12,4 +13,5 @@ export {
   useTypedSelector,
   useTimer,
   DonationProgressLine,
+  getSplitNum,
 };

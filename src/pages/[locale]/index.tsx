@@ -1,5 +1,6 @@
 import { PageWrapper } from '../../shared';
 import Features from '../../widgets/home-page/Features';
+import SpecialFeatures from '../../widgets/home-page/SpecialFeatures';
 import Title from '../../widgets/home-page/Title';
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <PageWrapper withMinMax={false}>
       <Title />
       <Features />
+      <SpecialFeatures />
     </PageWrapper>
   );
 }

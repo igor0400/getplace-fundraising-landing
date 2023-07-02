@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
 
 interface Props {
-  width: number;
+  width: number | string;
   currentProgress: number;
   maxProgress: number;
   className?: string;
@@ -35,13 +35,13 @@ const DonationProgressLine: FC<Props> = ({
     }
 
     if (progressProcent >= 98) {
-      setLineWidth(90);
+      setLineWidth(92);
       setSecondCircleWidth((100 - progressProcent) * 2);
       return;
     }
 
     if (progressProcent > 2) {
-      setLineWidth(progressProcent >= 93.5 ? 90 : progressProcent - 4);
+      setLineWidth(progressProcent >= 95.5 ? 92 : progressProcent - 4);
     }
   }
 
@@ -51,12 +51,14 @@ const DonationProgressLine: FC<Props> = ({
     setLineWidth(0);
   }
 
+  const isMaxLineWidth = lineWidth < 92;
+
   return (
     <div className={className} style={{ width }}>
       <svg viewBox={`0 0 100 8`} xmlns="http://www.w3.org/2000/svg">
-        <circle cx="2" cy="4" r="2" fill="#e5e5e5" />
-        <line strokeWidth="1.5" stroke="#e5e5e5" x1="1" y1="4" x2="96" y2="4" />
-        <circle cx="96" cy="4" r="2" fill="#e5e5e5" />
+        <circle cx="2" cy="4" r="2" fill="#E2E2E2" />
+        <line strokeWidth="1.5" stroke="#E2E2E2" x1="1" y1="4" x2="98" y2="4" />
+        <circle cx="98" cy="4" r="2" fill="#E2E2E2" />
 
         <rect
           x="0"
@@ -70,14 +72,14 @@ const DonationProgressLine: FC<Props> = ({
         <line
           strokeWidth={lineWidth === 0 ? '0' : '1.5'}
           stroke="#00d4a7"
-          x1={lineWidth < 90 ? '4' : '3'}
+          x1={isMaxLineWidth ? '4' : '3'}
           y1="4"
-          x2={lineWidth < 90 ? lineWidth + 4 : lineWidth + 4.1}
+          x2={isMaxLineWidth ? lineWidth + 4 : lineWidth + 4.1}
           y2="4"
-          strokeLinecap={lineWidth < 90 ? 'round' : undefined}
+          strokeLinecap={isMaxLineWidth ? 'round' : undefined}
         />
         <rect
-          x="94"
+          x="96"
           y="2"
           width="4"
           height="4"
