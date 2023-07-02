@@ -7,6 +7,7 @@ import settings from '../model/locale/translate.json';
 import copyright from 'public/icons/copyright.svg';
 import Link from 'next/link';
 import { useTypedSelector } from '../../../shared';
+import DonationTimeline from '../../../entities/DonationTimeline';
 
 const Footer: FC = () => {
   const { t } = useTranslate(settings);
@@ -22,6 +23,7 @@ const Footer: FC = () => {
         borderRadius: isLargerThan640 ? '80px 80px 0 0' : '40px 40px 0 0',
         background: '#1E1E1E',
       }}
+      id="support"
     >
       <div className="max-w-6xl w-full py-10 sm:py-20 px-5 sm:px-10">
         <div
@@ -56,9 +58,7 @@ const Footer: FC = () => {
             </div>
           </div>
           <div className="flex flex-col justify-between gap-y-8">
-            <div className="flex flex-wrap gap-4">
-              
-            </div>
+            <DonationTimeline maxWidth={400} size="small" />
             <div className="flex gap-1 opacity-50 font-light min-[801px]:justify-end">
               <Image src={copyright} alt="copyright" width={15} />
               <p>2023 Getplace.tech</p>

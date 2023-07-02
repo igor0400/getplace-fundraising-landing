@@ -3,7 +3,7 @@ import { useTranslate } from '../../../../features/locale';
 import Image from 'next/image';
 import { useMediaQuery } from '@mui/material';
 import Timer from './Timer';
-import DonationTimeline from './DonationTimeline';
+import DonationTimeline from '../../../../entities/DonationTimeline';
 
 import settings from '../model/locale/translate';
 import background from 'public/images/title-bg.png';
@@ -53,7 +53,7 @@ const Title: FC = () => {
             {t('description')}
           </p>
 
-          <DonationTimeline />
+          <DonationTimeline maxWidth={600} className="mt-10" />
         </div>
         <div className="flex items-center min-[1800px]:ml-20 max-[1300px]:mx-auto">
           <Image

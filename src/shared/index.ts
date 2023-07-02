@@ -5,6 +5,7 @@ import { useTypedSelector } from './lib/hooks/useTypedSelector';
 import { useTimer } from './lib/hooks/useTimer';
 import DonationProgressLine from './components/DonationProgressLine/DonationProgressLine';
 import { getSplitNum } from './lib/assets/getSplitNum';
+import { useAnimateOnScroll } from './lib/hooks/useAnimateOnScroll';
 
 export {
   Button,
@@ -14,4 +15,5 @@ export {
   useTimer,
   DonationProgressLine,
   getSplitNum,
+  useAnimateOnScroll,
 };

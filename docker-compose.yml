@@ -1,10 +1,10 @@
 version: '3.8'
 
 services:
-  getplace-landing:
+  getplace-fundraising-landing:
     build: ./
-    container_name: "getplace-landing"
-    image: getplace-landing
+    container_name: 'getplace-fundraising-landing'
+    image: getplace-fundraising-landing
 
     ports:
-      - "3001:3000"
+      - '3002:3000'
