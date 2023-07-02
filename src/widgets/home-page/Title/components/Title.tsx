@@ -3,16 +3,16 @@ import { useTranslate } from '../../../../features/locale';
 import Image from 'next/image';
 import { useMediaQuery } from '@mui/material';
 import classNames from 'classnames';
+import Timer from './Timer';
 
 import settings from '../model/locale/translate';
 
 import background from 'public/images/title-bg.png';
 import textBg from 'public/images/title-text-bg.png';
-import { useTimer } from '../../../../shared';
+import { DonationProgressLine } from '../../../../shared';
 
 const Title: FC = () => {
   const { t } = useTranslate(settings);
-  const { days, hours, minutes, seconds } = useTimer('2023-08-01');
   const isLargerThan1024 = useMediaQuery('(min-width: 1024px)');
   const isLargerThan640 = useMediaQuery('(min-width: 640px)');
   const isLargerThan425 = useMediaQuery('(min-width: 425px)');
@@ -53,10 +53,10 @@ const Title: FC = () => {
               dangerouslySetInnerHTML={{ __html: t('title') }}
             ></h1>
           </div>
-
           <p className="mt-5 sm:mt-8 min-[425px]:text-lg sm:text-xl leading-7 min-[425px]:leading-8 max-w-[280px] min-[425px]:max-w-sm">
             {t('description')}
           </p>
+          <DonationProgressLine className="mt-10" width={1000} />
         </div>
         <div className="flex items-center min-[1800px]:ml-20">
           <Image
@@ -64,24 +64,7 @@ const Title: FC = () => {
             alt="phone"
             className="w-fit h-fit z-10 max-[1160px]:hidden"
           />
-          <div className="flex flex-col gap-5 text-center">
-            <div>
-              <p className="text-7xl font-black">{days}</p>
-              <p className="font-medium text-xl">{t('timer').days}</p>
-            </div>
-            <div>
-              <p className="text-7xl font-black">{hours}</p>
-              <p className="font-medium text-xl">{t('timer').hours}</p>
-            </div>
-            <div>
-              <p className="text-7xl font-black">{minutes}</p>
-              <p className="font-medium text-xl">{t('timer').minutes}</p>
-            </div>
-            <div>
-              <p className="text-7xl font-black">{seconds}</p>
-              <p className="font-medium text-xl">{t('timer').seconds}</p>
-            </div>
-          </div>
+          <Timer className="flex flex-col gap-5 text-center" />
         </div>
       </div>
     </div>
