@@ -56,7 +56,12 @@ const Title: FC = () => {
           <p className="mt-5 sm:mt-8 min-[425px]:text-lg sm:text-xl leading-7 min-[425px]:leading-8 max-w-[280px] min-[425px]:max-w-sm">
             {t('description')}
           </p>
-          <DonationProgressLine className="mt-10" width={1000} />
+          <DonationProgressLine
+            className="mt-10"
+            width={600}
+            currentProgress={5000000}
+            maxProgress={20000000}
+          />
         </div>
         <div className="flex items-center min-[1800px]:ml-20">
           <Image
