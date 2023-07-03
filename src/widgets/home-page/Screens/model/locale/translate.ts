@@ -5,9 +5,9 @@ import screen4 from 'public/images/screen-card4.svg';
 import screen5 from 'public/images/screen-card5.svg';
 import screen1En from 'public/images/screen-card1-en.svg';
 import screen2En from 'public/images/screen-card2-en.svg';
-// import screen3En from 'public/images/screen-card3-en.svg';
-// import screen4En from 'public/images/screen-card4-en.svg';
-// import screen5En from 'public/images/screen-card5-en.svg';
+import screen3En from 'public/images/screen-card3-en.svg';
+import screen4En from 'public/images/screen-card4-en.svg';
+import screen5En from 'public/images/screen-card5-en.svg';
 
 export default {
   ru: {
@@ -75,21 +75,21 @@ export default {
         title: 'Booking and online payment module',
         description:
           'ONYX booking is a free module. Through which you can set up a reservation (via mobile app, website or call the administrator). With the ability to book both computers and set-top boxes',
-        imageUrl: screen3,
+        imageUrl: screen3En,
         float: 'right',
       },
       {
         title: 'Finance and analytics',
         description:
           'The owner or manager can easily track and analyze information on the work of his club. In real time, he can see the dynamics of visits to the institution, statistics, on which computers users spend more time and which games they play more willingly. It is also possible to control workload, customize pricing plans, create individual loyalty programs for players, and calculate staff efficiency.',
-        imageUrl: screen4,
+        imageUrl: screen4En,
         float: 'left',
       },
       {
         title: 'Console management',
         description:
           'Thanks to our development of the console controller, the administrator can control the console directly from the club card.',
-        imageUrl: screen5,
+        imageUrl: screen5En,
         float: 'right',
       },
     ],

@@ -58,6 +58,8 @@ const Title: FC = () => {
             src={t('images').phone}
             alt="phone"
             className="w-fit h-fit z-10 max-[1300px]:hidden"
+            width={500}
+            style={{ width: 500, height: 670 }}
           />
           <Timer className="flex min-[900px]:flex-col gap-5 text-center max-[550px]:mx-auto min-w-[100px]" />
         </div>
