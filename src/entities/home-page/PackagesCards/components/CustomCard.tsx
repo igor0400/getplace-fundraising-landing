@@ -37,7 +37,7 @@ const CustomCard: FC<CustomCardProps> = ({
       )}
       <div>
         <div className="flex gap-3 items-center">
-          <h3 className="font-extrabold text-3xl">{title}</h3>
+          <h3 className="font-extrabold text-2xl sm:text-3xl">{title}</h3>
           {arrow?.position === 'middle' ||
           (arrow?.position && !isLargerThan640) ? (
             <Checkbox {...arrow} />

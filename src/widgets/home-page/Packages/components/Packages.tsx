@@ -6,6 +6,7 @@ import {
   CustomCard,
   ImageCardProps,
 } from '../../../../entities/home-page/PackagesCards';
+import { useMediaQuery } from '@mui/material';
 
 import settings from '../model/locale/translate';
 import { useTranslate } from '../../../../features/locale';
@@ -17,6 +18,7 @@ interface CardPack {
 
 const Packages: FC = () => {
   const { t } = useTranslate(settings);
+  const isLargerThan640 = useMediaQuery('(min-width: 640px)');
 
   return (
     <div
@@ -32,7 +34,9 @@ const Packages: FC = () => {
                 <div
                   className="grid gap-5 sm:gap-10"
                   style={{
-                    gridTemplateColumns: `repeat(auto-fit, minmax(${360}px, 1fr))`,
+                    gridTemplateColumns: `repeat(auto-fit, minmax(${
+                      isLargerThan640 ? 360 : 300
+                    }px, 1fr))`,
                   }}
                   key={i}
                 >
