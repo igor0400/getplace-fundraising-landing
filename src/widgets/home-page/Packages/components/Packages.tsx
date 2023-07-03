@@ -12,7 +12,7 @@ import { useTranslate } from '../../../../features/locale';
 
 interface CardPack {
   title: string;
-  cardLists: Array<CustomCardProps | ImageCardProps>[];
+  cardLists: Array<CustomCardProps & ImageCardProps>[];
 }
 
 const Packages: FC = () => {
