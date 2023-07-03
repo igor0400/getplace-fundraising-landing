@@ -114,6 +114,10 @@ export default {
               title: 'Пакет Premium',
               till: 'до',
               bgColor: '#0BFFCB',
+              arrow: {
+                bgColor: '#FCC70A',
+                position: 'top',
+              },
               options: [
                 {
                   text: 'Годовой доступ к Premium',
@@ -149,6 +153,10 @@ export default {
               title: 'ALL эксклюзив',
               till: 'до',
               bgColor: '#FCC70A',
+              arrow: {
+                bgColor: '#0BFFCB',
+                position: 'top',
+              },
               options: [
                 {
                   text: 'Годовой доступ к Premium',
