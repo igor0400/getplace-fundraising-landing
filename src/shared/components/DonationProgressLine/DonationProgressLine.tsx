@@ -22,7 +22,7 @@ const DonationProgressLine: FC<Props> = ({
   }, [currentProgress]);
 
   function setWidths() {
-    const progressProcent = +((currentProgress * maxProgress) / 100).toFixed(1);
+    const progressProcent = +((currentProgress / maxProgress) * 100).toFixed(1);
 
     clearWidths();
 
